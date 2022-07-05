@@ -5,7 +5,7 @@
 <br>
 <img src="https://avatars.githubusercontent.com/u/76786120?v=4" width="128" height="128" style="border-radius: 50px; margin-right: 10px;" />
 </p>
-<h3 align="center">@istanbul/validate</h3>
+<h3 align="center">@istanbul/i18n</h3>
 <p align="center">
-  Validation package of <code>istanbul</code> framework. 
+  Internationalization package of <code>istanbul</code> framework. 
 </p>
