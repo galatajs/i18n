@@ -75,4 +75,78 @@ describe("i18n tests", () => {
     });
     expect(res).toBe("The field must be a string");
   });
+
+  it("createI18n and test loadModule", async () => {
+    const app = createApp();
+    const i18n = createI18n({
+      localesDir: path.resolve(__dirname, "./locales"),
+    });
+    app.register(i18n);
+    await app.start();
+    await i18n.loadModule({
+      dir: path.resolve(__dirname, "./module"),
+      key: "test",
+    });
+    const res: string = i18n.translate({
+      keys: "test.name",
+    });
+    expect(res).toBe("My module");
+  });
+
+  it("createI18 and load module to deep", async () => {
+    const app = createApp();
+    const i18n = createI18n({
+      localesDir: path.resolve(__dirname, "./locales"),
+    });
+    app.register(i18n);
+    await app.start();
+    await i18n.loadModule({
+      dir: path.resolve(__dirname, "./module"),
+      key: "test",
+      base: "root",
+    });
+    const res: string = i18n.translate({
+      keys: "root.test.name",
+    });
+    expect(res).toBe("My module");
+  });
+
+  it("createI18 and load module to deep and use deep translation in this module", async () => {
+    const app = createApp();
+    const i18n = createI18n({
+      localesDir: path.resolve(__dirname, "./locales"),
+    });
+    app.register(i18n);
+    await app.start();
+    await i18n.loadModule({
+      dir: path.resolve(__dirname, "./module"),
+      key: "test",
+      base: "root",
+    });
+    const res: string = i18n.translate({
+      keys: "root.test.live.years.2022",
+    });
+    expect(res).toBe("happy");
+  });
+
+  it("createI18n and load module to deep and use parameter translation", async () => {
+    const app = createApp();
+    const i18n = createI18n({
+      localesDir: path.resolve(__dirname, "./locales"),
+    });
+    app.register(i18n);
+    await app.start();
+    await i18n.loadModule({
+      dir: path.resolve(__dirname, "./module"),
+      key: "test",
+      base: "root",
+    });
+    const res: string = i18n.translate({
+      keys: "root.test.yourName",
+      values: {
+        name: "John Doe",
+      },
+    });
+    expect(res).toBe("Your Name John Doe");
+  });
 });

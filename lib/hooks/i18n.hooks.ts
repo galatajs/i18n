@@ -1,10 +1,11 @@
 import { I18nConfig } from "./../app/i18n.app";
 import { createLoader } from "./loader.hooks";
 import { createResolver } from "./resolver.hooks";
-import { I18nApp, I18nOptions, Message } from "../app/i18n.app";
+import { I18nApp, Message } from "../app/i18n.app";
 import { CorePlugin } from "@istanbul/app";
 import { I18nConfigParams } from "../types/i18n.params";
 import { createConfig } from "./config.hooks";
+import { LoadI18nWithModuleParams } from "../types/loader.types";
 
 export const createI18n = (config?: I18nConfigParams): I18nApp => {
   const messages: Message = {};
@@ -15,6 +16,9 @@ export const createI18n = (config?: I18nConfigParams): I18nApp => {
     config: defaultConf,
     translate: resolver.translate,
     messages: messages,
+    async loadModule(params: LoadI18nWithModuleParams): Promise<void> {
+      await loader.loadI18nWithModule(params);
+    },
     build(): CorePlugin {
       return {
         name: "i18n",

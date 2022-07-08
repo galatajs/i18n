@@ -1,3 +1,9 @@
 {
-  "name": "Benim Modülüm"
+  "name": "Benim Modülüm",
+  "yourName": "Senin adın {name}",
+  "live": {
+    "years": {
+      "2022": "mutlu"
+    }
+  }
 }

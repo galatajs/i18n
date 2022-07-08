@@ -1,3 +1,9 @@
 {
-  "name": "My module"
+  "name": "My module",
+  "yourName": "Your Name {name}",
+  "live": {
+    "years": {
+      "2022": "happy"
+    }
+  }
 }

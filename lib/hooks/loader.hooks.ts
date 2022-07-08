@@ -67,13 +67,17 @@ const createModuleLoader = (
         messages[params.locale][params.key] = params.messages;
         return;
       }
-      const res = params.base.split(config.separator).reduce((res, key) => {
-        if (typeof res === "string") {
-          return messages[params.locale][res][key];
-        }
-        if (typeof res === "object" && res[key]) return res[key];
-        return res;
-      });
+      const separated = params.base.split(config.separator);
+      const res =
+        separated.length === 1
+          ? messages[params.locale][separated[0]]
+          : separated.reduce((res, key) => {
+              if (typeof res === "string") {
+                return messages[params.locale][res][key];
+              }
+              if (typeof res === "object" && res[key]) return res[key];
+              return res;
+            });
       res[params.key] = params.messages;
     },
   };
@@ -82,7 +86,7 @@ const createModuleLoader = (
 export const createLoader = (messages: Message, config: I18nConfig): Loader => {
   const fileLoader = createFileLoader(messages, config);
   const moduleLoader = createModuleLoader(
-    fileLoader.loadI18nWithDirectory,
+    fileLoader.loadI18nWithDirectory.bind(fileLoader),
     messages,
     config
   );
