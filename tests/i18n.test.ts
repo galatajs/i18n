@@ -17,4 +17,21 @@ describe("i18n tests", () => {
     });
     expect(i18n.config.localesDir).toBe(_path);
   });
+
+  it("createI18n with different fallback option", () => {
+    const fallback = "tr";
+    const i18n = createI18n({
+      fallback: fallback,
+    });
+    expect(i18n.config.fallback).toBe(fallback);
+  });
+
+  it("createI18n and use the istanbul app", () => {
+    const app = createApp();
+    const i18n = createI18n({
+      localesDir: path.resolve(__dirname, "./locales"),
+    });
+    app.register(i18n);
+    app.start();
+  });
 });
