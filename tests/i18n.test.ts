@@ -26,12 +26,53 @@ describe("i18n tests", () => {
     expect(i18n.config.fallback).toBe(fallback);
   });
 
-  it("createI18n and use the istanbul app", () => {
+  it("createI18n and use the istanbul app", async () => {
     const app = createApp();
     const i18n = createI18n({
       localesDir: path.resolve(__dirname, "./locales"),
     });
     app.register(i18n);
-    app.start();
+    await app.start();
+  });
+
+  it("createI18n and try first translate", async () => {
+    const app = createApp();
+    const i18n = createI18n({
+      localesDir: path.resolve(__dirname, "./locales"),
+    });
+    app.register(i18n);
+    await app.start();
+    const res: string = i18n.translate({
+      keys: "country",
+      locale: "en",
+    });
+    expect(res).toBe("US");
+  });
+
+  it("createI18n and try fallback translation", async () => {
+    const app = createApp();
+    const i18n = createI18n({
+      fallback: "tr",
+      localesDir: path.resolve(__dirname, "./locales"),
+    });
+    app.register(i18n);
+    await app.start();
+    const res: string = i18n.translate({
+      keys: "country",
+    });
+    expect(res).toBe("TR");
+  });
+
+  it("createI18n and try deep translation", async () => {
+    const app = createApp();
+    const i18n = createI18n({
+      localesDir: path.resolve(__dirname, "./locales"),
+    });
+    app.register(i18n);
+    await app.start();
+    const res: string = i18n.translate({
+      keys: "validation.fieldMustBeString",
+    });
+    expect(res).toBe("The field must be a string");
   });
 });

@@ -20,8 +20,8 @@ export const createI18n = (config?: I18nConfigParams): I18nApp => {
         name: "i18n",
         version: "1.0.0",
         onAppStarted() {},
-        install: () => {
-          loader.loadI18n(this.config.localesDir);
+        install: async (): Promise<void> => {
+          await loader.loadI18n(this.config.localesDir);
         },
       };
     },

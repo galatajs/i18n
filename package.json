@@ -33,7 +33,7 @@
     "build": "npm run clear && tsc"
   },
   "dependencies": {
-    "@istanbul/app": "^0.0.4"
+    "@istanbul/app": "^0.0.6"
   },
   "devDependencies": {
     "@types/jest": "^28.1.3",
