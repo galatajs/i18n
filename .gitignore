@@ -5,6 +5,7 @@ logs
 /dist
 /.idea
 .idea
+.vscode
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

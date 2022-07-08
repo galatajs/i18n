@@ -1,0 +1,13 @@
+{
+  "country": "US",
+  "validation": {
+    "fieldMustBeString": "The field must be a string",
+    "fieldMustBeNumber": "The field must be a number",
+    "fieldMustBeBoolean": "The field must be a boolean"
+  },
+  "root": {
+    "messages": {
+      "greeting": "Hello, World!"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "country": "TR",
+  "validation": {
+    "fieldMustBeString": "Bu alan bir string olmalıdır.",
+    "fieldMustBeNumber": "Bu alan bir number olmalıdır.",
+    "fieldMustBeBoolean": "Bu alan bir boolean olmalıdır."
+  },
+  "root": {
+    "messages": {
+      "greeting": "Merhaba, Dünya!"
+    }
+  }
+}
