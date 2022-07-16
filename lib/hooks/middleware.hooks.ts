@@ -1,7 +1,5 @@
-import { Request, Response, NextFunction } from "@istanbul/http";
+import { Request } from "@istanbul/http";
 import { I18nConfig, I18nOptions } from "../app/i18n.app";
-import { i18nStore } from "../store/i18n.store";
-import { I18nStoreKeys } from "../store/i18n.store-keys";
 
 const tryFindLocaleWithHeaders = (req: Request): string | null => {
   let locale = req.headers.get("accept-language");
@@ -29,7 +27,7 @@ const localeFinders: Record<
     req.body[config.localeKey],
 };
 
-const findLocale = (req: Request, config: I18nConfig): string => {
+export const findLocale = (req: Request, config: I18nConfig): string => {
   let locale: string | null = null;
   let index = 0;
   while (index < config.options.length && typeof locale !== "string") {
@@ -37,25 +35,4 @@ const findLocale = (req: Request, config: I18nConfig): string => {
     index++;
   }
   return locale || config.fallback;
-};
-
-export const createI18nMiddleware = (): ((
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => void) => {
-  return (req: Request, res: Response, next: NextFunction) => {
-    const config = i18nStore.inject(I18nStoreKeys.config) as I18nConfig;
-    const resolverGetter = i18nStore.inject(I18nStoreKeys.resolver);
-    req.lang = findLocale(req, config);
-    req.t = (key: string, values?: Record<string, string>): string => {
-      const resolver = resolverGetter();
-      return resolver.translate({
-        keys: key,
-        values: values,
-        locale: req.lang,
-      });
-    };
-    next();
-  };
 };

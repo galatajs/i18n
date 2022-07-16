@@ -1,8 +1,3 @@
-declare module "@istanbul/http" {
-  interface Http1Request extends I18nRequest {}
-  interface Http2Request extends I18nRequest {}
-}
-
 export interface I18nMiddlewareFunction {
   /**
    * @param {string} key The key of the message to translate.

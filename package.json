@@ -1,6 +1,6 @@
 {
   "name": "@istanbul/i18n",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Internationalization packages of istanbul framework",
   "homepage": "https://github.com/istanbulnode/i18n#readme",
   "keywords": [
@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@istanbul/http": "^0.0.7",
+    "@istanbul/ws": "^0.0.8",
     "@types/jest": "^28.1.3",
     "@types/node": "^18.0.3",
     "@types/supertest": "^2.0.12",
