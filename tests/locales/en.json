@@ -1,4 +1,7 @@
 {
+  "middleware": {
+    "message": "Hello Middleware!"
+  },
   "country": "US",
   "validation": {
     "fieldMustBeString": "The field must be a string",
