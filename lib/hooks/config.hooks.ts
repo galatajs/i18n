@@ -4,8 +4,15 @@ import path from "path";
 
 const defaultConfig: I18nConfig = {
   fallback: "en",
-  localesDir: path.resolve(__dirname, "locales"),
-  options: [I18nOptions.AcceptLanguage, I18nOptions.Query, I18nOptions.Cookie],
+  localeKey: "lang",
+  localesDir: path.resolve(process.cwd(), "locales"),
+  options: [
+    I18nOptions.Body,
+    I18nOptions.Params,
+    I18nOptions.Query,
+    I18nOptions.AcceptLanguage,
+    I18nOptions.Cookie,
+  ],
   separator: ".",
 };
 

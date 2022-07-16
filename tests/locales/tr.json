@@ -1,5 +1,8 @@
 {
   "country": "TR",
+  "middleware": {
+    "message": "Merhaba Middleware!"
+  },
   "validation": {
     "fieldMustBeString": "Bu alan bir string olmalıdır.",
     "fieldMustBeNumber": "Bu alan bir number olmalıdır.",
