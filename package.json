@@ -1,6 +1,6 @@
 {
   "name": "@istanbul/i18n",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Internationalization packages of istanbul framework",
   "homepage": "https://github.com/istanbulnode/i18n#readme",
   "keywords": [
