@@ -1,5 +1,5 @@
-import { Resolver } from "../resolvers/root.resolver";
 import { CorePluginCreator } from "@istanbul/app";
+import { Resolver } from "../resolvers/root.resolver";
 import { LoadI18nWithModuleParams } from "../types/loader.types";
 import { I18nConfigParams } from "../types/i18n.params";
 
@@ -26,6 +26,15 @@ export interface I18nConfig {
    * @description The key of the locale in the request query or params or cookie.
    */
   localeKey: string;
+
+  /**
+   * @default ["en"]
+   * @description The list of languages that are available.
+   * @type {string[]}
+   * @memberof I18nConfig
+   * @example ["en", "fr"]
+   */
+  languages: string[];
   /**
    * @default "."
    * @description The separator of the keys in translate function.

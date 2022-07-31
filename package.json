@@ -1,11 +1,12 @@
 {
   "name": "@istanbul/i18n",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Internationalization packages of istanbul framework",
   "homepage": "https://github.com/istanbulnode/i18n#readme",
   "keywords": [
     "typescript",
     "istanbul",
+    "istanbuljs",
     "messages",
     "i18n"
   ],
@@ -28,31 +29,20 @@
     "dist/**/*"
   ],
   "scripts": {
-    "test": "jest --watchAll --no-cache",
+    "test": "node --test",
     "clear": "del-cli ./dist/*",
-    "build": "npm run clear && tsc"
+    "build": "npm run clear && tsc",
+    "production": "npm run build && npm run test"
   },
   "dependencies": {
-    "@istanbul/app": "^0.0.10",
-    "@istanbul/inject": "^0.0.2"
+    "@istanbul/app": "^0.0.20",
+    "@istanbul/inject": "^0.0.4"
   },
   "devDependencies": {
-    "@istanbul/http": "^0.0.7",
-    "@istanbul/ws": "^0.0.8",
-    "@types/jest": "^28.1.3",
+    "@istanbul/http": "^0.0.17",
+    "@istanbul/ws": "^0.0.16",
     "@types/node": "^18.0.3",
-    "@types/supertest": "^2.0.12",
-    "jest": "^28.1.1",
-    "supertest": "^6.2.4",
-    "ts-jest": "^28.0.5",
+    "socket.io-client": "^4.5.1",
     "typescript": "^4.7.4"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "moduleNameMapper": {
-      "@/(.*)": "<rootDir>/$1",
-      "~/(.*)": "<rootDir>/$1"
-    }
   }
 }
