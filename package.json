@@ -1,6 +1,6 @@
 {
   "name": "@istanbul/i18n",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Internationalization packages of istanbul framework",
   "homepage": "https://github.com/istanbulnode/i18n#readme",
   "keywords": [
@@ -35,7 +35,7 @@
     "production": "npm run build && npm run test"
   },
   "dependencies": {
-    "@istanbul/app": "^0.0.20",
+    "@istanbul/app": "^0.0.33",
     "@istanbul/inject": "^0.0.4"
   },
   "devDependencies": {
