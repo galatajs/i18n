@@ -3,8 +3,8 @@ import {
   GlobalMiddleware,
   NextFunction,
   transformHttpRequest,
-} from "@istanbul/ws";
-import { Request as HttpRequest } from "@istanbul/http";
+} from "@galatajs/ws";
+import { Request as HttpRequest } from "@galatajs/http";
 import { I18nConfig } from "../app/i18n.app";
 import { i18nStore } from "../store/i18n.store";
 import { I18nStoreKeys } from "../store/i18n.store-keys";

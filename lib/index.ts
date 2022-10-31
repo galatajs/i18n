@@ -1,5 +1,5 @@
 /**
- * istanbul @i18n
+ * galatajs @i18n
  * Copyright(c) 2022 Sami Salih İBRAHİMBAŞ
  * MIT Licensed
  */

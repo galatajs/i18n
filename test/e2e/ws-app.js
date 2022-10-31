@@ -1,8 +1,8 @@
 "use-strict";
 const path = require("node:path");
-const { createApp } = require("@istanbul/app");
-const { createWsApp } = require("@istanbul/ws");
-const { createHttpServer } = require("@istanbul/http");
+const { createApp } = require("@galatajs/app");
+const { createWsApp } = require("@galatajs/ws");
+const { createHttpServer } = require("@galatajs/http");
 const { io: Client } = require("socket.io-client");
 const { createI18nWebsocketMiddleware, createI18n } = require("../../dist");
 

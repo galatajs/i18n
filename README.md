@@ -2,19 +2,19 @@
 <br>
 <img src="https://avatars.githubusercontent.com/u/108695351?s=200&v=4" width="128" height="128">
 </p>
-<h3 align="center">@istanbul/i18n</h3>
+<h3 align="center">@galatajs/i18n</h3>
 <p align="center">
-  Internationalization package of <code>istanbul</code> framework. 
+  Internationalization package of <code>galatajs</code> framework. 
 </p>
 
 ### What Is It?
 
-This package is the i18n package of the ``istanbul`` framework.
+This package is the i18n package of the ``galatajs`` framework.
 
 With this package, you can perform http requests, websocket requests or anything else with i18n support.
 
 Features:
-- %100 support wherever ``istanbul`` works. (Websocket, Http, Microservice, Cli and more)
+- %100 support wherever ``galatajs`` works. (Websocket, Http, Microservice, Cli and more)
 - Fast and parametric usage
 - Customizable settings
 - %100 support for modular development with dynamic module support.
@@ -23,23 +23,23 @@ Features:
 
 ### Installation
 
-Note: This package is 1st degree dependent on ``istanbul`` to work. Please take a look at [`@istanbul/app`](https://www.npmjs.com/package/@istanbul/app) first if you haven't. 
+Note: This package is 1st degree dependent on ``galatajs`` to work. Please take a look at [`@galatajs/app`](https://www.npmjs.com/package/@galatajs/app) first if you haven't. 
 
 ```sh
-npm install @istanbul/i18n
+npm install @galatajs/i18n
 ```
 
 > or with yarn
 >
 > ```sh
-> yarn add @istanbul/i18n
+> yarn add @galatajs/i18n
 > ```
 
 ### Basic Usage
 
 ```typescript
-import { createApp } from '@istanbul/app';
-import { createI18n } from "@istanbul/i18n";
+import { createApp } from '@galatajs/app';
+import { createI18n } from "@galatajs/i18n";
 
 const app = createApp();
 const i18n = createI18n();
@@ -124,8 +124,8 @@ json:
 ts:
 
 ```typescript
-import { createApp } from '@istanbul/app';
-import { createI18n } from "@istanbul/i18n";
+import { createApp } from '@galatajs/app';
+import { createI18n } from "@galatajs/i18n";
 
 const app = createApp();
 const i18n = createI18n();
@@ -146,15 +146,15 @@ app.register(i18n);
 
 ### Load Dynamic Module
 
-The I18n package has been developed for the ``istanbul`` framework. ``istanbul`` framework supports modular development %100. However, we cannot develop language files modularly in similar modular frameworks. ``istanbul`` differs from its competitors here. If you want, you can externally host and load the language files of the product module!
+The I18n package has been developed for the ``galatajs`` framework. ``galatajs`` framework supports modular development %100. However, we cannot develop language files modularly in similar modular frameworks. ``galatajs`` differs from its competitors here. If you want, you can externally host and load the language files of the product module!
 
 In addition, dynamic loading operations can be performed with this feature. Because no installation is performed until you call the code.
 
 ### Example
 
 ```typescript
-import { createApp } from '@istanbul/app';
-import { createI18n } from "@istanbul/i18n";
+import { createApp } from '@galatajs/app';
+import { createI18n } from "@galatajs/i18n";
 
 const app = createApp();
 const i18n = createI18n();

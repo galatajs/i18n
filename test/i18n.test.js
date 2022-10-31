@@ -1,7 +1,7 @@
 const assert = require("node:assert");
 const test = require("node:test");
 const path = require("node:path");
-const { createApp } = require("@istanbul/app");
+const { createApp } = require("@galatajs/app");
 const { createI18n } = require("../dist");
 
 test("I18n Tests", async (t) => {
@@ -29,7 +29,7 @@ test("I18n Tests", async (t) => {
     assert.strictEqual(i18n.config.fallback, fallback);
   });
 
-  await t.test("createI18n and use the istanbul app", async () => {
+  await t.test("createI18n and use the galatajs app", async () => {
     const app = createApp();
     const i18n = createI18n({
       localesDir: path.resolve(__dirname, "./locales"),

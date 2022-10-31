@@ -1,12 +1,10 @@
 {
-  "name": "@istanbul/i18n",
-  "version": "0.0.6",
-  "description": "Internationalization packages of istanbul framework",
-  "homepage": "https://github.com/istanbulnode/i18n#readme",
+  "name": "@galatajs/i18n",
+  "version": "0.1.1",
+  "description": "Internationalization packages of galatajs framework",
+  "homepage": "https://github.com/galatajs/i18n#readme",
   "keywords": [
     "typescript",
-    "istanbul",
-    "istanbuljs",
     "messages",
     "i18n"
   ],
@@ -14,14 +12,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/istanbulnode/i18n.git"
+    "url": "git+https://github.com/galatajs/i18n.git"
   },
   "bugs": {
-    "url": "https://github.com/istanbulnode/i18n/issues"
+    "url": "https://github.com/galatajs/i18n/issues"
   },
   "directories": {
     "lib": "lib",
-    "test": "tests"
+    "test": "test"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -35,12 +33,12 @@
     "production": "npm run build && npm run test"
   },
   "dependencies": {
-    "@istanbul/app": "^0.0.33",
-    "@istanbul/inject": "^0.0.4"
+    "@galatajs/app": "^0.1.1",
+    "@galatajs/inject": "^0.1.1"
   },
   "devDependencies": {
-    "@istanbul/http": "^0.0.17",
-    "@istanbul/ws": "^0.0.16",
+    "@galatajs/http": "^0.1.1",
+    "@galatajs/ws": "^0.1.1",
     "@types/node": "^18.0.3",
     "socket.io-client": "^4.5.1",
     "typescript": "^4.7.4"

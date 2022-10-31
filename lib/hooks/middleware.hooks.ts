@@ -1,4 +1,4 @@
-import { Request } from "@istanbul/http";
+import { Request } from "@galatajs/http";
 import { I18nConfig, I18nOptions } from "../app/i18n.app";
 import { calculateLocale } from "./config.hooks";
 

@@ -1,4 +1,4 @@
-import { CorePlugin } from "@istanbul/app";
+import { CorePlugin } from "@galatajs/app";
 import { I18nConfig, I18nCreator } from "../app/i18n.app";
 import { createLoader } from "./loader.hooks";
 import { createResolver } from "./resolver.hooks";

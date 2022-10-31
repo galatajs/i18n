@@ -1,7 +1,7 @@
 "use-strict";
 const path = require("node:path");
-const { createApp } = require("@istanbul/app");
-const { createHttpServer, createRouter } = require("@istanbul/http");
+const { createApp } = require("@galatajs/app");
+const { createHttpServer, createRouter } = require("@galatajs/http");
 const { createI18nMiddleware, createI18n } = require("../../dist");
 const Request = require("./request");
 

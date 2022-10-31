@@ -1,4 +1,4 @@
-import { CorePluginCreator } from "@istanbul/app";
+import { CorePluginCreator } from "@galatajs/app";
 import { Resolver } from "../resolvers/root.resolver";
 import { LoadI18nWithModuleParams } from "../types/loader.types";
 import { I18nConfigParams } from "../types/i18n.params";
